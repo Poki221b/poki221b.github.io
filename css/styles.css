@@ -1,0 +1,770 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+:root{
+    --clr-light: #FFFFFF;
+    --clr-dark: #000000;
+    --clr-accent: #8da33e;
+    --clr-dark2: #16302B;
+    --clr-bg: #ece7d0;
+
+    --ff-main: roboto;
+    --ff-text: serif;
+
+  /*
+  yellow #ece7d0
+  green #c2df93 */
+
+}
+
+/*
+    --clr-light: #FFFFFF;
+    --clr-dark2: #16302B;
+    --clr-accent: #C1D852;
+
+    background-color: #16302B;
+*/
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--ff-main), serif;
+    color: var(--clr-dark);
+    font-size: 1.125rem;
+}
+
+body{
+    background-color: var(--clr-light);
+}
+
+.bg{
+  outline: 2px solid black;
+  background-image: url(djeram.library/images/img-bg2);
+  width: 100%;
+}
+
+/* light theme color scheme */
+body[data-theme="light"] {
+  --clr-light: #FFFFFF;
+    --clr-dark: #000000;
+    --clr-accent: #8da33e;
+    --clr-dark2: #16302B;
+    --clr-bg: #ece7d0;
+}
+
+/* Box shadow properties */
+header,
+.content,
+.container-meni,
+.container-about{
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+/* Positioning page on desktop */
+.content {
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--clr-bg);
+}
+
+html,
+body{
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+
+}
+
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+p{
+    margin: 0;
+}
+
+p{
+    margin-bottom: 0.85em;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: center;
+}
+
+h2,
+h3{
+    font-family: var(--ff-main);
+    line-height: 1;
+}
+
+
+/* Images */
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.logo{
+    text-align: center;
+    margin: 0;
+    padding: .6em;
+}
+
+.logo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    min-width: 250px;
+    background-position: 50%;
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+/* Section */
+section {
+    padding: 3em 1em;
+    overflow: hidden;
+}
+
+
+/* Buttons */
+
+.btn1{
+  text-align: center;
+  margin: 0;
+}
+
+input.btn-1,
+button.btn-1{
+  background-color: var(--clr-accent);
+  color: var(--clr-dark2);
+  padding: .6em;
+  font-size: 1rem;
+  font-weight: 550;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: .8em;
+}
+
+.btn-1:hover{
+  background-color: #546210;
+  color: white;
+}
+
+.btn-1 a{
+  color: var(--clr-dark2);
+  text-decoration: none;
+  padding: 1em;
+}
+
+.btn-1 a:hover {
+  color: white;
+}
+
+
+/* Navigation */
+
+header{
+    padding: 1em 0 .6em;
+    background-color: var(--clr-accent);
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: var(--clr-accent);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: var(--clr-dark2);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--clr-bg);
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--clr-dark2);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* DROPDOWN */
+
+/* Style The Dropdown Button */
+
+  /* The container <div> - needed to position the dropdown content */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: .3em;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+
+  .dropdown-content a:hover {
+      background-color: #f1f1f1
+    }
+
+  /* Show the dropdown menu on hover */
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button
+   when the dropdown content is shown */
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  /* Color switcher */
+  .theme-switcher {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+
+  input {
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    display: block;
+    text-indent: -9999px;
+    height: 30px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s ease background-color;
+  }
+  label::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: rgb(46, 42, 68);
+    transition: 0.5s ease;
+  }
+  input:checked + label::after {
+    /* left: calc(100% - 2.5px); */
+    left: calc(100% - 25px);
+    background-color: aliceblue;
+  }
+  input:checked + label {
+    background-color: rgb(25, 26, 37);
+    border: 2px solid whitesmoke;
+  }
+
+
+
+/* Main section */
+
+section.main{
+    background-color: var(--clr-bg);
+    margin-bottom: 1em;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Map */
+
+iframe{
+    max-width: 100%;
+}
+
+/*
+img.main {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 100%, 0;
+    align-content: center;
+  }*/
+
+.text-tittle{
+    color: var(--clr-dark);
+    margin: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: .4em;
+}
+
+span{
+    color: #ea6309;
+    font-style: oblique;
+    font-weight: 900;
+}
+
+.map{
+    max-width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Gallery section on main page */
+
+.gallery__section {
+  margin-bottom: .4em;
+  padding-top: 1em;
+  padding-bottom: .2em;
+  max-width: 100%;
+}
+
+/* Header galerija*/
+header.galerija{
+    color: var(--clr-light);
+    padding: 1em;
+    font-size: 1.125rem;
+
+}
+
+/* Galerija link*/
+.galerija a{
+    text-decoration: none;
+    color: #16302B;
+    font-weight: 900;
+}
+
+.galerija a:hover{
+    color:#bbc6ab;
+    text-decoration: underline;
+}
+
+
+/* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    padding: 1.5em;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 50px;
+    margin-right: 1.4em;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(180, 178, 178, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: var(--clr-dark);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .row {
+    display: hidden;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  /* Meni section */
+
+  .meni {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  /* Meni container */
+
+  .container-meni {
+    flex-direction: column;
+  }
+
+  .meni-text {
+    padding: 1em;
+  }
+
+  .meni-img {
+    max-width: 100%;
+    padding: 1em;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: #1F0C46;
+    padding: 3em 1em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+  }
+
+  footer a {
+    color: inherit;
+  }
+
+  .footer-nav,
+  .footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1em 0;
+    text-align: center;
+  }
+
+  .foooter-nav a {
+    padding: 0.75em;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .rights{
+    text-align: left;
+    color: #808080;
+  }
+
+
+  .mail__footer{
+    color: rgb(126, 138, 201);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .mail__footer:hover{
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  /* O nama */
+
+  .title-about {
+    padding: .3em;
+    font-weight: 800;
+  }
+
+  .about-text,
+  .fun {
+    padding: 1em;
+    font-size: larger;
+  }
+
+  .container-about,
+  .container-meni {
+    background: wheat;
+    display: flex;
+    padding: 1em;
+    padding-bottom: 2em;
+    margin: .6em;
+    border-radius: .35em;
+  }
+
+  .container-about {
+    flex-direction: column;
+  }
+
+  .legend,
+  .nuns {
+    padding: .2em;
+    line-height: normal;
+  }
+
+  .legend {
+    color: var(--clr-dark2);
+  }
+
+  .info{
+    text-align: center;
+  }
+
+  /* Form */
+
+  .reserve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    justify-content: center;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: center;
+  }
+  /*  */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+  }
+
+  /* Date */
+  input[type=date] {
+    padding: 1em;
+    font-size: large;
+    margin: .6em;
+    margin-bottom: 1em;
+  }
+
+  .reserve{
+
+      background-color: #f2f2f2;
+      padding: 20px;
+      line-height: 3em;
+    }
+
+  .phone a{
+    display: flex;
+    padding: .3em;
+  }
+
+  /* Gallery page */
+ .gallery{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+
+ .gallery-item{
+  max-width: 80%;
+  padding: 1em;
+  filter: grayscale(75%);
+ }
+
+
+
+ .gallery-item:hover{
+  transition: .5s;
+  transform: scale(110%);
+  cursor: pointer;
+  filter: none;
+ }
+
+
+
+
+
+
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+
+
+
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .gal{
+    padding: 0.5em;
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .container-meni{
+    flex-direction: row;
+    flex: 0 1 50%;
+  }
+
+  .album{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .gal{
+    max-width: 350px;
+    padding: 1em;
+    margin-left: 1.2em;
+  }
+
+  .gallery-item{
+    max-width: 45%;
+  }
+
+  footer-nav{
+    flex-direction: column;
+  }
+}
+
+/* When the screen is less than 770 pixels wide, display images 1by1 */
+@media screen and (max-width: 775px) {
+
+  .album{
+    margin: .3em;
+  }
+
+  .gal{
+    max-width: 100%;
+  }
+}

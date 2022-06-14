@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="./index.js"></script>
+    <title>Rezervacija</title>
+</head>
+<body>
+    <!-- Page content -->
+    <div class="content">
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="djeram.library/icons/logo djeram.png" alt="logo" class="logo1"/><a href="index.html">
+                </a>
+            </div>
+            <!-- Top Navigation Menu -->
+      <div class="topnav" id="myTopnav">
+        <a href="index.html"><img src="djeram.library/icons/icons8-home-24.png" alt="home"></a>
+        <a href="o nama.html">О нама</a>
+        <a href="galerija.html">Галерија</a>
+        <a href="rezervacija.html" class="active">Резервација</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+        </header> 
+        <!--dropdown menu-->
+    <div class="dropdown">
+        <!--<i class="fa fa-gear fa-spin" style="font-size:24px"></i>
+        <div class="dropdown-content">
+            <div class="theme-switcher">
+                <input type="checkbox" id="switcher">
+                <label for=switcher>switch</label>
+              </div>
+          <a href="#">Језик</a>
+        </div>-->
+    </div>    
+    
+        <div class="reserve">
+            <!--The div element for the map -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15922.108388697876!2d19.893489144914398!3d45.13327171845145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b0142c40012df%3A0xa81f771a40787b20!2z0JHRgNCw0L3QutCwINCg0LDQtNC40YfQtdCy0LjRm9CwLCDQk9GA0LPQtdGC0LXQsw!5e0!3m2!1ssr!2srs!4v1654171623718!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        <h2 class="text-tittle">Боравак можете резервисати путем:</h2>
+        <div class="phone">
+        <a href="tel:+381 65 5551433"><img src="djeram.library/icons/icons8-phone-100.png" alt="dial"></a>
+        <a href="mailto: ilija82@yahoo.com"><img src="djeram.library/icons/icons8-mail-100.png" alt="mail"></a>
+        <a href="https://www.facebook.com/people/Ilija-Brdar/100072285164602/"><img src="djeram.library/icons/icons8-facebook-100.png" alt="facebook"></a>
+        </div>
+        <h3>Check-in je od 13:00,<br>Check-out je do 12:00</h3>
+        
+    </div>
+    <!-- Script-->
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+ var x = document.getElementById("myTopnav");
+ if (x.className === "topnav") {
+   x.className += " responsive";
+ } else {
+   x.className = "topnav";
+ }
+}
+
+
+
+
+           let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+ showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+ showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+ let i;
+ let slides = document.getElementsByClassName("mySlides");
+ let dots = document.getElementsByClassName("demo");
+ let captionText = document.getElementById("caption");
+ if (n > slides.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = slides.length}
+ for (i = 0; i < slides.length; i++) {
+   slides[i].style.display = "none";
+ }
+ for (i = 0; i < dots.length; i++) {
+   dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex-1].style.display = "block";
+ dots[slideIndex-1].className += " active";
+ captionText.innerHTML = dots[slideIndex-1].alt;
+}
+       </script>
+    </div>
+    
+</body>
+<footer>
+  <div class="footer-content">
+    <ul class="footer-nav">
+          <li><a href="#">О нама</a></li>
+          <li><a href="#">Галерија</a></li>
+          <li><a href="#">Резервација</a></li>
+    </ul>
+    <div class="container-rights">
+      <div class="rights">
+        <p>© 2022 - Fruskogorski Djeram<br> All Right Reserved</p>
+      </div>
+    </div>
+    <div class="rights">
+      <p>powered by: <br><a href="mailto:pojuzinajovan@gmail.com" class="mail__footer">pojuzinajovan@gmail.com</a></p>
+    </div>
+  </div><!--footer content closing tag-->
+</footer>
+</html>
