@@ -680,7 +680,7 @@ header.galerija{
  .gallery-item{
   max-width: 80%;
   padding: 1em;
-  filter: grayscale(75%);
+  filter: none;
  }
 
 
