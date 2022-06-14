@@ -688,7 +688,7 @@ header.galerija{
   transition: .5s;
   transform: scale(110%);
   cursor: pointer;
-  filter: none;
+  filter: grayscale(75%);
  }
 
 
