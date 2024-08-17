@@ -1,248 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script type="module" src="./index.js"></script>
-  <title>Fruskogorski Djeram</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A1%2C100%2C200%2C300%2C400%2C400italic%2C700%7CMontserrat%3A400%7CRoboto%3A400&amp;display=swap" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <script src="https://kit.fontawesome.com/95bb56f051.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Hunter</title>
 </head>
+<body>
+  <header>
+    <div class="navbar">
+      <ul class="links">
+        <li><a href="index.html">Pocetna</a></li>
+        <li><a href="galerija.html">O nama</a></li>
+        <li><a href="za-maju.html">Kontakt</a></li>
+      </ul>
 
-<body data-theme="light">
-  <!-- Page content -->
-  <div class="content">
+      <div class="logo"><a href="#">
+        <img src="images/logo.png" alt="logo">
+      </a></div>
 
-
-
-
-    <!--Header and logo-->
-    <header>
-      <div class="header">
-        <div class="logo">
-          <a href="index.html">
-            <img src="djeram.library/icons/logo djeram.png" alt="logo" class="logo1" /><a href="index.html">
-            </a>
-        </div>
+      <a href="" class="action-btn">SHOP</a>
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
-
-      <!-- Top Navigation Menu -->
-      <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active"><img src="djeram.library/icons/icons8-home-24-light.png" alt="home"></a>
-        <a href="o nama.html">О нама</a>
-        <a href="galerija.html">Галерија</a>
-        <a href="rezervacija.html">Резервација</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    </header>
-
-    <!--dropdown menu-->
-    <div class="dropdown">
-      <!--<i class="fa fa-gear fa-spin" style="font-size:24px"></i>
-        <div class="dropdown-content">
-          <div class="theme-switcher">
-            <input type="checkbox" id="switcher">
-            <label for=switcher>switch</label>
-          </div>
-          <a href="#">Језик</a>
-        </div>-->
     </div>
-    <!--Galery-->
-    <section class="gallery_section">
-      <header class="galerija">
-        <h3 class="galerija"><a href="galerija.html">Галерија</a></h3>
-      </header>
-      <!-- Container for the image gallery -->
-      <div class="container">
 
-        <!-- Full-width images with number text -->
-        <div class="mySlides">
-          <div class="numbertext">1 / 6</div>
-          <img src="djeram.library/images/img-out4.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">2 / 6</div>
-          <img src="djeram.library/images/img-out2.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">3 / 6</div>
-          <img src="djeram.library/images/img-out3.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">4 / 6</div>
-          <img src="djeram.library/images/img-food.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">5 / 6</div>
-          <img src="djeram.library/images/img-room.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">6 / 6</div>
-          <img src="djeram.library/images/img-rooms2.jpg" style="width:100%">
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-        <!-- Thumbnail images -->
-        <div class="row">
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-out4.jpg" style="width:100%"
-              onclick="currentSlide(1)" alt="The Woods">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-out2.jpg" style="width:100%"
-              onclick="currentSlide(2)" alt="Cinque Terre">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-out3.jpg" style="width:100%"
-              onclick="currentSlide(3)" alt="Mountains and fjords">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-food.jpg" style="width:100%"
-              onclick="currentSlide(4)" alt="Northern Lights">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-room.jpg" style="width:100%"
-              onclick="currentSlide(5)" alt="Nature and sunrise">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="djeram.library/images/img-rooms2.jpg" style="width:100%"
-              onclick="currentSlide(6)" alt="Snowy Mountains">
-          </div>
-        </div>
+    <div class="dropdown-menu">
+      <li><a href="index.html">Pocetna</a></li>
+      <li><a href="galerija.html">O nama</a></li>
+      <li><a href="za-maju.html">Kontakt</a></li>
+      <li><a href="" class="action-btn">SHOP</a></li>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="wrapper">
+        <h1>HUNTER FASHION</h1>
+        <h2>| Mi ne prodajemo brend, mi prodajemo kvalitet! |</h2>
+        <p>Ispunili smo zadatak kao i uvek da ponudimo najbolje kolekcije za muški deo stanovništva. Moderan dizajn i unikatni modeli naše kolekcije koji su prepoznatljivi po svojoj originalnosti čine našu ponudu još bogatijom! Hunterova kolekcija takođe simbolizuje luksuznu čaroliju elegantnih slim odela koja predstavlja džentlmena koji je svestan svog stila. Naš tim u Hunteru je tu za Vas da odgovarajuću odeću, bez obzira da li su to košulje, sakoi, pantalone, farmerice ili odela u pitanju, može učiniti da se izdvojite iz gomile. Hunterov tim pokreće neverovatnu maštu stavljajući akcenat na prekrasne boje naše kolekcije. Zato, kako biste upotpunili svoj stil i učinili ga jedinstvenim u nekoj svečanoj prilici, da li je to svadba, matura...ili neki lud provod posetite nas u <span class="bold">HUNTER</span>-u.</p>
+        <a href="shop.html" class="link-btn-shop">SHOP</a>
       </div>
-      <h3 class="text-tittle">Фрушкогорски ђерам,<br>
-        Ресторан <span>домаће хране</span> са <span>преноћиштем</span> поред манастира Гргетег. <br>
-        Уживајте у чарима Фрушке горе!</h3>
-      <div class="btn1">
-        <button class="btn-1"><a href="o nama.html">Прочитај још</a></button>
-      </div>
-    </section>
+      <img name='slide' class="hero-img" src="images/Plavo-Strukirano-Odelo.jpg" alt="plavo strukirano odelo">
+    </div>
+  </section>
 
-    <!--main section-->
-    <main>
-      <section class="main">
-        <!--The div element for the map -->
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15922.108388697876!2d19.893489144914398!3d45.13327171845145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b0142c40012df%3A0xa81f771a40787b20!2z0JHRgNCw0L3QutCwINCg0LDQtNC40YfQtdCy0LjRm9CwLCDQk9GA0LPQtdGC0LXQsw!5e0!3m2!1ssr!2srs!4v1654171623718!5m2!1ssr!2srs"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <!--
-            <img src="djeram.library/images/mainPhoto.jpg" alt="main" class="main"> -->
+  <section class="product"> 
+    <h2 class="product-category">novi proizvodi</h2>
+    <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+    <div class="product-container">
+        <!-- Product cards go here -->
+    </div>
+  </section>
 
-      </section>
-    </main>
+  <hr>
 
-    <!--Meni i smestaj-->
-    <section class="meni">
-      <div class="container-meni">
-        <div class="meni-text">
-          <p> Praesent sapien massa, convallis a pellentesque nec,
-            egestas non nisi. Curabitur aliquet quam id dui posuere
-            blandit. Quisque velit nisi, pretium ut lacinia in,
-            elementum id enim. </p>
-        </div>
-        <div class="meni-right">
-          <img src="djeram.library/images/img-food5.jpg" alt="image-meni" class="meni-img">
-          <div class="btn1">
-            <button class="btn-1"><a href="galerija.html">Прикажи више</a></button>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- CATEGORIES  -->
+  <section class="categories">
+    <h2 class="product-category">popularne kategorije</h2>
+    <div class="category-icons-wrapper" id="category-icons-wrapper">
+      <!-- Category icons will be dynamically added here -->
+    </div>
+    <button id="random-items-btn" class="btn-random-items">Prikazi Slučajne Proizvode</button>
+    <div class="product-container-ctg" id="product-container-ctg">
+      <button class="pre-btn-ctg"><img src="images/arrow.png" alt=""></button>
+      <button class="nxt-btn-ctg"><img src="images/arrow.png" alt=""></button>
+      <!-- Product cards for categories will be dynamically added here -->
+    </div>
+  </section>
 
+  <section class="events">
+    <div class="columns">
+      <div class="vencanja"></div>
+      <div class="mature"></div>
+    </div>
+  </section>
 
-    <!-- Script-->
-
-    <script>
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-
-
-
-
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("demo");
-        let captionText = document.getElementById("caption");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[slideIndex - 1].alt;
-      }
-
-
-
-    </script>
-  </div>
-  <!--content closed-->
+  <script src="script.js"></script>
 </body>
-
-<footer>
-  <div class="footer-content">
-    <ul class="footer-nav">
-      <li><a href="o nama.html">О нама</a></li>
-      <li><a href="galerija.html">Галерија</a></li>
-      <li><a href="rezervacija.html">Резервација</a></li>
-    </ul>
-    <div class="container-rights">
-      <div class="rights">
-        <p>© 2022 - Fruskogorski Djeram<br> All Right Reserved</p>
-      </div>
-    </div>
-    <div class="rights">
-      <p>powered by: <br><a href="mailto:pojuzinajovan@gmail.com" class="mail__footer">pojuzinajovan@gmail.com</a></p>
-    </div>
-  </div>
-  <!--footer content closing tag-->
-</footer>
-
 </html>
